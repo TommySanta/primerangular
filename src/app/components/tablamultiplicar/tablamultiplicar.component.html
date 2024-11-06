@@ -1,0 +1,17 @@
+<div>
+    <h1>Tabla de Multiplicar</h1>
+    <form (submit)="TablaNumeros(); $event.preventDefault()">
+        <label for="cajanumero">Número</label>
+        <input type="number" name="cajanumero" #cajanumero /><br />
+        <button type="submit">Mostrar Tabla</button>
+    </form>
+
+    <div *ngIf="tabla.length > 0">
+        <h2>Resultados:</h2>
+        <ul>
+            <li *ngFor="let item of tabla">
+                {{ item.operacion }} = {{ item.resultado }}
+            </li>
+        </ul>
+    </div>
+</div>
