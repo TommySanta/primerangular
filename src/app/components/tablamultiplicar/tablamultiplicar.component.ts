@@ -14,7 +14,7 @@ export class TablamultiplicarComponent {
     this.tabla = [];
 
     for (let i = 1; i <= 10; i++) {
-      const resultado = numero * i;
+      let resultado = numero * i;
       this.tabla.push({ operacion: `${numero} x ${i}`, resultado });
     }
   }
